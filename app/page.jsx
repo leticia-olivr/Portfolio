@@ -28,12 +28,12 @@ export default function Home() {
 
           <div className="actions">
 
-            <Link
-              href="/projetos"
+            <a
+              href="#projetos"
               className="button primary"
             >
               Ver projetos
-            </Link>
+            </a>
 
             <a
               href="/curriculo.pdf"
@@ -67,66 +67,95 @@ export default function Home() {
           title="Principais habilidades"
         />
 
-        <div className="skillsMarquee">
+        <div className="skillsGrid">
 
-          <div className="skillsTrack">
+          <div className="skillCard">
+            <img
+              src="/icons/java.png"
+              alt="Java"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/java.png" alt="Java" />
-            </div>
+          <div className="skillCard">
+            <img
+              src="/icons/spring.png"
+              alt="Spring Boot"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/spring.png" alt="Spring Boot" />
-            </div>
+          <div className="skillCard">
+            <img
+              src="/icons/sql.png"
+              alt="SQL"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/sql.png" alt="SQL" />
-            </div>
+          <div className="skillCard">
+            <img
+              src="/icons/api.svg"
+              alt="API"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/api.png" alt="API" />
-            </div>
+          <div className="skillCard">
+            <img
+              src="/icons/angular.svg"
+              alt="Angular"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/angular.png" alt="Angular" />
-            </div>
+          <div className="skillCard">
+            <img
+              src="/icons/git.png"
+              alt="Git"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/git.png" alt="Git" />
-            </div>
+          <div className="skillCard">
+            <img
+              src="/icons/github.svg"
+              alt="GitHub"
+            />
+          </div>
 
-            <div className="skillCard">
-              <img src="/icons/github.png" alt="GitHub" />
-            </div>
+        </div>
 
-            {/* DUPLICADOS */}
+      </section>
 
-            <div className="skillCard">
-              <img src="/icons/java.png" alt="Java" />
-            </div>
+      {/* PROJETOS */}
 
-            <div className="skillCard">
-              <img src="/icons/spring.png" alt="Spring Boot" />
-            </div>
+      <section
+        id="projetos"
+        className="projectsSection"
+      >
 
-            <div className="skillCard">
-              <img src="/icons/sql.png" alt="SQL" />
-            </div>
+        <SectionTitle
+          title="Projetos"
+        />
 
-            <div className="skillCard">
-              <img src="/icons/api.png" alt="API" />
-            </div>
+        <div className="projectsGrid">
 
-            <div className="skillCard">
-              <img src="/icons/angular.png" alt="Angular" />
-            </div>
+          <div className="projectCard">
 
-            <div className="skillCard">
-              <img src="/icons/git.png" alt="Git" />
-            </div>
+            <h2>
+              Portfolio
+            </h2>
 
-            <div className="skillCard">
-              <img src="/icons/github.png" alt="GitHub" />
+            <p>
+              Portfólio moderno desenvolvido com
+              Next.js, React e CSS.
+            </p>
+
+            <div className="actions">
+
+              <a
+                href="https://github.com/leticia-olivr"
+                target="_blank"
+                className="button secondary"
+              >
+                GitHub
+              </a>
+
             </div>
 
           </div>

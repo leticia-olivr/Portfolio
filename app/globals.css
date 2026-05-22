@@ -347,10 +347,10 @@ main {
   border-radius: 30px;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
 
-  backdrop-filter: blur(10px);
+  align-items: center;
+
+  justify-content: center;
 
   transition: .3s;
 
@@ -658,54 +658,6 @@ main {
 
   font-weight: 800;
 }
-.skillsMarquee {
 
-  width: 100%;
 
-  overflow: hidden;
 
-  margin-top: 3rem;
-
-  margin-bottom: 7rem;
-
-  position: relative;
-
-  mask-image:
-    linear-gradient(
-      to right,
-      transparent,
-      black 10%,
-      black 90%,
-      transparent
-    );
-}
-
-.skillsTrack {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 1.5rem;
-
-  width: max-content;
-
-  animation:
-    marquee 22s linear infinite;
-}
-
-.skillsTrack:hover {
-
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
