@@ -14,9 +14,9 @@ export default function ProjectCard({ project }) {
       <a
         href={project.html_url}
         target="_blank"
-        className="button secondary"
+        className="button primary"
       >
-        Ver no GitHub
+        Ver repositório
       </a>
     </article>
   );

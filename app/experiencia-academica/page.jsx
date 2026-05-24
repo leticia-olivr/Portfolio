@@ -1,47 +1,77 @@
 import SectionTitle from '@/components/SectionTitle';
 
-const experienciasAcademicas = [
+const experiencias = [
   {
-    instituicao: 'Faculdade / Universidade',
-    curso: 'Curso na área de Tecnologia',
-    periodo: '2024 - Atual',
-    descricao:
-      'Formação com foco em desenvolvimento web, lógica de programação, banco de dados, projetos práticos e tecnologias modernas.'
+    year: '2024',
+    title: 'Início da graduação',
+    institution: 'Faculdade / Universidade',
+    description:
+      'Início da trajetória na área de tecnologia com foco em lógica, desenvolvimento web e fundamentos da programação.'
   },
+
   {
-    instituicao: 'Curso de Desenvolvimento Web',
-    curso: 'HTML, CSS, JavaScript e React',
-    periodo: '2025',
-    descricao:
-      'Estudos voltados para criação de interfaces responsivas, componentização, boas práticas e construção de projetos reais.'
+    year: '2025',
+    title: 'Desenvolvimento Web',
+    institution: 'React • Next.js • JavaScript',
+    description:
+      'Evolução em interfaces modernas, componentização, responsividade e construção de projetos práticos.'
   },
+
   {
-    instituicao: 'Formação Salesforce',
-    curso: 'Salesforce Developer',
-    periodo: '2026',
-    descricao:
-      'Aprendizado sobre a plataforma Salesforce, componentes, organização de projetos, desenvolvimento e deploy.'
+    year: '2026',
+    title: 'Salesforce Developer',
+    institution: 'Formação Salesforce',
+    description:
+      'Aprendizado sobre desenvolvimento na plataforma Salesforce, componentes, automações e deploy.'
   }
 ];
 
 export default function ExperienciaAcademica() {
   return (
     <section className="pageContainer">
+
       <SectionTitle
-        title="Experiência Acadêmica"
-        subtitle="Minha formação, cursos e estudos na área de tecnologia"
+        title="Trajetória Acadêmica"
+        subtitle="Minha evolução e aprendizado na área de tecnologia"
       />
 
-      <div className="experienceGrid">
-        {experienciasAcademicas.map((item) => (
-          <article className="experienceCard" key={item.curso}>
-            <span>{item.periodo}</span>
-            <h2>{item.curso}</h2>
-            <h3>{item.instituicao}</h3>
-            <p>{item.descricao}</p>
-          </article>
+      <div className="timeline">
+
+        {experiencias.map((item, index) => (
+
+          <div
+            key={index}
+            className="timelineItem"
+          >
+
+            <div className="timelineDot" />
+
+            <div className="timelineCard">
+
+              <span className="timelineYear">
+                {item.year}
+              </span>
+
+              <h2>
+                {item.title}
+              </h2>
+
+              <h3>
+                {item.institution}
+              </h3>
+
+              <p>
+                {item.description}
+              </p>
+
+            </div>
+
+          </div>
+
         ))}
+
       </div>
+
     </section>
   );
 }

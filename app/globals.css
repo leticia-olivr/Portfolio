@@ -378,7 +378,9 @@ main {
 
 .footer {
 
-  padding: 2rem 8%;
+  padding: 3rem 8%;
+
+  margin-top: 2rem;
 
   border-top: 1px solid var(--border);
 
@@ -478,6 +480,7 @@ main {
     text-align: center;
   }
 }
+
 .pageContainer {
   padding: 9rem 8% 4rem;
   min-height: 100vh;
@@ -494,10 +497,17 @@ main {
   margin-bottom: 2rem;
 }
 
+/* PROJECTS */
+
+.projectsSection {
+  padding: 2rem 8% 8rem;
+}
+
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .projectCard {
@@ -542,25 +552,35 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* ABOUT */
+
+/* ✅ ATUALIZADO */
 .aboutGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  margin-top: 3rem;
+  align-items: stretch;
 }
 
+/* ✅ ATUALIZADO */
 .aboutCard {
-  background: rgba(255,255,255,.86);
+  background: rgba(255,255,255,.88);
   border: 1px solid var(--border);
   border-radius: 28px;
   padding: 2rem;
   box-shadow: var(--shadow);
   transition: .3s;
+  backdrop-filter: blur(10px);
 }
 
 .aboutCard:hover {
   transform: translateY(-6px);
+  background: white;
 }
 
+/* ✅ ADICIONADO */
 .aboutCard h2 {
   color: var(--primary);
   margin-bottom: 1rem;
@@ -572,11 +592,7 @@ main {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 750px) {
-  .aboutGrid {
-    grid-template-columns: 1fr;
-  }
-}
+/* EXPERIENCE */
 
 .experienceGrid {
   display: grid;
@@ -633,31 +649,136 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* TECHS */
+
 .techs {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: .7rem;
-
   margin-top: 1.5rem;
 }
 
 .techBadge {
+  background: #e5efdf;
+  color: var(--primary);
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 800;
+}
+.skillBadge {
+  background: rgba(255,255,255,.88);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  padding: .7rem 1rem;
+  border-radius: 999px;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
+  transition: .3s;
+}
+
+.skillBadge:hover {
+  transform: translateY(-4px);
+  background: white;
+  box-shadow: var(--shadow);
+}
+.timeline {
+
+  position: relative;
+
+  margin-top: 4rem;
+
+  padding-left: 2rem;
+
+  border-left: 4px solid var(--accent);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+.timelineItem {
+
+  position: relative;
+}
+
+.timelineDot {
+
+  width: 22px;
+  height: 22px;
+
+  background: var(--primary);
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  left: -2.75rem;
+
+  top: 1.5rem;
+
+  border: 4px solid white;
+
+  box-shadow: var(--shadow);
+}
+
+.timelineCard {
+
+  background: rgba(255,255,255,.88);
+
+  border: 1px solid var(--border);
+
+  border-radius: 28px;
+
+  padding: 2rem;
+
+  box-shadow: var(--shadow);
+
+  transition: .3s;
+}
+
+.timelineCard:hover {
+
+  transform: translateY(-6px);
+
+  background: white;
+}
+
+.timelineYear {
+
+  display: inline-block;
 
   background: #e5efdf;
 
   color: var(--primary);
 
-  padding: .55rem .9rem;
+  padding: .45rem .9rem;
 
   border-radius: 999px;
 
-  font-size: .9rem;
-
   font-weight: 800;
+
+  margin-bottom: 1rem;
 }
 
+.timelineCard h2 {
 
+  color: var(--primary);
 
+  margin-bottom: .5rem;
+}
+
+.timelineCard h3 {
+
+  margin-bottom: 1rem;
+}
+
+.timelineCard p {
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}

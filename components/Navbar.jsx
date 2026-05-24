@@ -8,7 +8,7 @@ const links = [
   { href: '/sobre', label: 'Sobre', type: 'page' },
   { href: '/experiencia-academica', label: 'Acadêmica', type: 'page' },
   { href: '/experiencia-profissional', label: 'Profissional', type: 'page' },
-  { href: '#projetos', label: 'Projetos', type: 'section' }
+  { href: '/#projetos', label: 'Projetos', type: 'section' }
 ];
 
 export default function Navbar() {

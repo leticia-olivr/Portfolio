@@ -1,7 +1,32 @@
-import Link from 'next/link';
+import ProjectCard from '@/components/ProjectCard';
 import SectionTitle from '@/components/SectionTitle';
 
-export default function Home() {
+async function getRepos() {
+  try {
+    const response = await fetch(
+      'https://api.github.com/users/leticia-olivr/repos?sort=updated&per_page=100',
+      {
+        next: {
+          revalidate: 3600
+        }
+      }
+    );
+
+    if (!response.ok) {
+      return [];
+    }
+
+    return response.json();
+
+  } catch {
+    return [];
+  }
+}
+
+export default async function Home() {
+
+  const repos = await getRepos();
+
   return (
     <>
       <section className="hero">
@@ -135,30 +160,14 @@ export default function Home() {
 
         <div className="projectsGrid">
 
-          <div className="projectCard">
+          {repos.map((repo) => (
 
-            <h2>
-              Portfolio
-            </h2>
+            <ProjectCard
+              key={repo.id}
+              project={repo}
+            />
 
-            <p>
-              Portfólio moderno desenvolvido com
-              Next.js, React e CSS.
-            </p>
-
-            <div className="actions">
-
-              <a
-                href="https://github.com/leticia-olivr"
-                target="_blank"
-                className="button secondary"
-              >
-                GitHub
-              </a>
-
-            </div>
-
-          </div>
+          ))}
 
         </div>
 
