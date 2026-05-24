@@ -46,9 +46,7 @@ export default async function Home() {
           </h2>
 
           <p>
-            Desenvolvedora apaixonada por tecnologia,
-            interfaces modernas e construção de
-            aplicações web escaláveis.
+            Desenvolvedora Back-End apaixonada por tecnologia, arquitetura de sistemas e construção de aplicações web escaláveis, com foco em desempenho, APIs e soluções robustas.
           </p>
 
           <div className="actions">
